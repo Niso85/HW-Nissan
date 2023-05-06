@@ -6,7 +6,7 @@ var message = "";
 var i = value.length - 1;
 while (i >= 0) {
   reverse += value[i];
-  i--
+  i--;
 }
 
 if (palindrome == reverse) {
