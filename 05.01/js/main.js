@@ -1,11 +1,18 @@
 const Student = [];
-var repeat = true;
+let repeat = true;
 
 while (repeat) {
-  var studentName = prompt("Enter a student name please: ");
-  Student.push(studentName);
-  repeat = confirm("Do yiu want add another student?");
+  let studentName = prompt("Enter a student name please: ");
+  if (studentName) {
+    Student.push(studentName.toLowerCase().replace(" ",""));
+    repeat = confirm("Do you want add another student?");
+  } else {
+    repeat = false;
+  }
 }
 
-Student = Student.sort();
-alert("Here are all students after sorting: " + Student.join(", "));
+if (Student.length > 0) {
+  alert("Here are all students after sorting: " + Student.sort().join(", "));
+} else {
+  alert("There is no list to show!");
+}
