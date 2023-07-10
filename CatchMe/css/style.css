@@ -1,0 +1,90 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.start-game {
+  width: 100vw;
+  height: 15vh;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.start-game > span:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+}
+
+.game-container {
+  width: 80vw;
+  height: 85vh;
+  background-color: black;
+  position: relative;
+}
+
+.side-nav {
+  width: 20vw;
+  height: 85vh;
+  background-color: rgb(0, 136, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-block {
+  width: 80%;
+  height: 15%;
+  background-color: blanchedalmond;
+  margin: 0.2vh;
+  font-size: larger;
+  padding: 1.5vh;
+}
+.black-area{
+  width: 100%;
+  height: 100%;
+}
+
+.side-block>span{
+    display: block;
+}
+
+.side-block>.value{
+    margin-top: 4vh;
+}
+
+.spinner{
+    width: fit-content;
+    background-color: rgb(222,222,234);
+    user-select: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 6px;
+}
+
+.spinning{
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
